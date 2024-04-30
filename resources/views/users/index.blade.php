@@ -6,6 +6,28 @@
 
 @section('content')
     <h1>Users</h1>
+<div class="row">
+
+    <div class="col-sm-6">
+        <form method="post" action="{{route('users.create.dummy')}}">
+            @csrf
+            <button type="submit" class="btn btn-primary">
+                Create Dummy
+            </button>
+        </form>
+    </div>
+
+    <div class="col-sm-6">
+        <form method="post" action="{{route('users.delete.dummy')}}">
+            @csrf
+            @method('delete')
+            <button type="submit" class="btn btn-danger">
+                Delete All
+            </button>
+        </form>
+    </div>
+
+</div>
 
     <div class="row mb-4">
         <table>
