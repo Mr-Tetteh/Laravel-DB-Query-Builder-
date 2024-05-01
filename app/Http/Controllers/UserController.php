@@ -25,7 +25,8 @@ class UserController extends Controller
 //        dd($users);
 
 
-                $users = DB::table('users')->get();
+
+                $users = DB::table('users')->paginate(10);
         return view('users/index', compact('users'));
     }
 

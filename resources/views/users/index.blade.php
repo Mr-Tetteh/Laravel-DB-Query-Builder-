@@ -72,6 +72,7 @@
             </tbody>
         </table>
     </div>
+    {{$users->links()}}
 @endsection
 
 @section('scripts')
